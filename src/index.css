@@ -1,0 +1,62 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #080C10;
+  --surface:  #0E1419;
+  --card:     #141B24;
+  --border:   #1E2D3D;
+  --accent1:  #00E5FF;
+  --accent2:  #7C4DFF;
+  --accent3:  #00E676;
+  --accent4:  #FF5252;
+  --accent5:  #FFB300;
+  --text:     #E8EDF2;
+  --muted:    #607D8B;
+  --infra:    #00E5FF;
+  --sistemas: #7C4DFF;
+  --redes:    #00E676;
+  --digital:  #FF5252;
+  --projetos: #FFB300;
+}
+
+html { font-size: 14px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+select, input {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  border-radius: 6px;
+  padding: 7px 10px;
+  outline: none;
+  cursor: pointer;
+}
+select:focus, input:focus { border-color: var(--accent1); }
+select option { background: var(--card); }
+
+button {
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
